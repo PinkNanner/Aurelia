@@ -17,6 +17,9 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+/*
+* All actions are run from here
+* */
 public class MainScreen implements Screen {
     static Stage stage, uiStage;
     static Group objectGroup = new Group(), selectImageGroup = new Group();

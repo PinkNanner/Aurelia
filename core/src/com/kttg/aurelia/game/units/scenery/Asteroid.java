@@ -29,7 +29,7 @@ public class Asteroid {
         hp = health;
         objInfo = new Object(name, getDrawable(), getVariables(), getLabels(), true);
     }
-    public Asteroid(){
+    public Asteroid(){ //For filling out the editor window
         i = new Image(Setup.getSpriteSkin().getDrawable("asteroid"));
         w = i.getWidth();
         h = i.getHeight();

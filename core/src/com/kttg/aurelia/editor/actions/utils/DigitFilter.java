@@ -8,7 +8,7 @@ public class DigitFilter implements TextField.TextFieldFilter {
 
     public DigitFilter() {
         accepted = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'};
-    }
+    } //Prevents putting letters into numerical values like x/y
 
     @Override
     public boolean acceptChar(TextField textField, char c) {

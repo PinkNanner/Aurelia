@@ -14,7 +14,7 @@ public class InputCore implements InputProcessor {
 
     public boolean scrolled(int amount) {
 
-        if(amount == 1){
+        if(amount == 1){ //Controls scroll wheel zooming
             cam.zoom += .02f;
         }
         else if(amount == -1){

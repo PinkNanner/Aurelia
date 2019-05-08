@@ -8,6 +8,11 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+/*
+* Reads all placed Objects and saves them to .txt file
+* - Allows for adding as many custom values with labels as you want, determined by the units type
+* */
+
 public class Save {
     public static void SaveFile(){
         UI.unFocusText();

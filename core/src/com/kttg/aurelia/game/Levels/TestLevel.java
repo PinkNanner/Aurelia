@@ -16,6 +16,12 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+
+/*
+* Creates a game world in the physics engine,
+* loads the test world by pressing "space"
+* */
+
 public class TestLevel implements Screen {
     static Game game;
     static Stage stage = new Stage() {
@@ -38,7 +44,7 @@ public class TestLevel implements Screen {
     public void show() {
         testWorld = new World(new Vector2(0, 0), false);
         testWorld.setContactListener(new CollisionListener());
-        Load.LoadFile("level0", objectGroup, objectArrayList);
+        Load.LoadFile("level0", objectGroup, objectArrayList); //level0 is the default test world
         stage.addActor(objectGroup);
         cam = new OrthographicCamera(stage.getCamera().viewportWidth/PPM, stage.getCamera().viewportHeight/PPM); //Controls camera starting zoom
     }

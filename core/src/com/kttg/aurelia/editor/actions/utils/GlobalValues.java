@@ -4,8 +4,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 
 public class GlobalValues {
 
-    static int globalId = -1;
-    static int animTimer;
+    static int globalId = -1; //Must always start new program from -1 to load data correctly
+    static int animTimer; //Global timer for menu animation
     static Drawable selectionDrawable = Setup.getUIButtonSkin().getDrawable("selection0");
 
 

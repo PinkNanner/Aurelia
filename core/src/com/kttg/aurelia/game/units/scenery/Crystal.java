@@ -29,7 +29,7 @@ public class Crystal {
         hp = health;
         objInfo = new Object(name, getDrawable(), getVariables(), getLabels(), true);
     }
-    public Crystal(){
+    public Crystal(){ //For filling out the editor window
         i = new Image(Setup.getSpriteSkin().getDrawable("enemyBossBlue"));
         w = i.getWidth();
         h = i.getHeight();

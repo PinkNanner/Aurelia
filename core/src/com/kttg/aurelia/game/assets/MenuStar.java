@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 import java.util.Random;
 
-public 	class MenuStar {
+public 	class MenuStar { //Main menu stars, to be rewritten soonTM
     Image b;
     float PPM = 2f, w = Gdx.graphics.getWidth(), h = Gdx.graphics.getHeight(), x, y;
     int typ, num0;

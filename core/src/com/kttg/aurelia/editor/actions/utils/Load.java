@@ -11,6 +11,12 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+/*
+ * For loading a saved level into the editor screen
+ * - Checks if targeted file exists
+ * - Reads level data and creates all Objects
+ * - */
+
 public class Load {
 
     public static void LoadFile(){

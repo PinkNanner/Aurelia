@@ -22,6 +22,16 @@ public class SelectObject {
     static Image dragRectImg = new Image(Setup.getUIButtonSkin().getDrawable("dragImage"));
     static Rectangle dragRect = new Rectangle();
 
+    /*
+    * Controls the mouse actions when selecting objects:
+    * - Clicking blank space clears all selections
+    * - Clicking an object clears the selected list and selects the new object
+    * - Clicking an object while holding "shift" adds that object to the current selected list
+    * - Clicking and dragging a box clears current list and adds any object the box overlaps to the new list
+    * - Clicking and dragging a box with shift adds to the current list
+    * - Clicking while holding "ctrl" causes all selected objects to face the mouse
+    * - Pressing the delete key will remove any selected objects
+    * */
     public static void update(){
 //        System.out.println("Updating SelectObject");
         UI.unFocusText();
@@ -70,7 +80,7 @@ public class SelectObject {
             selectedObjList.get(i).setAngle(Mouse.getX(), Mouse.getY());
         }
     }
-    public static void stopSelecting(){
+    public static void stopSelecting(){ //Clears all lists and deselects all objects
         SelectObject.setXYTemps();
         Mouse.isDragging = false;
         dragRectImg.setVisible(false);
@@ -86,7 +96,7 @@ public class SelectObject {
         }
         selectedObjList.clear();
     }
-    public static void updateDragRect(){
+    public static void updateDragRect(){ //Controls the mouse drag box
         float tempW, tempH;
         tempW = Math.abs(tempRectX-Mouse.getX());
         tempH = Math.abs(tempRectY-Mouse.getY());
@@ -171,9 +181,9 @@ public class SelectObject {
     }
 
 
-    public static void addImgListener(Image i){
+    public static void addImgListener(Image i){ //Listener for when an image is clicked on
 //        System.out.println("Adding listener to image");
-        i.addListener(new InputListener() { //Listener for when an image is clicked on
+        i.addListener(new InputListener() {
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 if (Mouse.isSelectingObject()) {
 //                    System.out.println("Clicking image with a listener");

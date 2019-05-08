@@ -6,6 +6,9 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.kttg.aurelia.game.units.Object;
 
+/*
+* Determines what the mouse is currently doing, selecting or placing an object
+* */
 public class Mouse {
     static float x, y;
     static boolean isPlacingObject = false, isOverUI = false, isClicking = false, isSelectingObject = false, isDragging = false;
@@ -30,7 +33,7 @@ public class Mouse {
         }
     }
 
-    public static void setCursor(String s){
+    public static void setCursor(String s){ //Allows selecting objects in the world
         if (s == "selectObject"){
             SelectObject.setXYTemps();
             isDragging = false;
@@ -38,7 +41,7 @@ public class Mouse {
             isSelectingObject = true;
             PlaceObject.getPreviewImage().setVisible(false);
         }
-        else if (s == "placeObject"){
+        else if (s == "placeObject"){ //Allows placing objects in the world
             SelectObject.stopSelecting();
             SelectObject.finishSelecting();
             isSelectingObject = false;

@@ -13,7 +13,7 @@ public class Camera {
             dragNew = new Vector2(Gdx.input.getX(), Gdx.input.getY());
             dragOld = dragNew;
         }
-        if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
+        if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) { //Drags the camera around using right click
             dragNew = new Vector2(Gdx.input.getX(), Gdx.input.getY());
             if (!dragNew.equals(dragOld)) {
                 stage.getCamera().translate(dragOld.x - dragNew.x, dragNew.y - dragOld.y, 0); //Translate by subtracting the vectors

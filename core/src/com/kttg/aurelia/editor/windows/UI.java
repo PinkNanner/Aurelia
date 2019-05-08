@@ -22,6 +22,9 @@ import java.util.Map;
 import static com.kttg.aurelia.editor.actions.utils.Setup.getUITextFieldStyle;
 import static java.lang.Math.round;
 
+/*
+* Creates the level editor UI*/
+
 public class UI {
     static Stage uiStage;
     static Image selectedImage, gridImage;
@@ -144,7 +147,7 @@ public class UI {
     }
 
 
-    public static void fillUnitsScroller(){
+    public static void fillUnitsScroller(){ //Fills with placeable units created in the game folders
 
             for (int i = 0; i < unitVars.size(); i++) {
                 System.out.println("Drawable = " + unitVars.get(i).getImage().getDrawable());
@@ -180,7 +183,8 @@ public class UI {
         unitsTable.pack();
     }
                                                         //Loading saved level should initially load all default data, then fill in with saved variables?
-    public static void fillVariablesScroller(Object object){
+    public static void fillVariablesScroller(Object object){ //Fills a Scroll Pane with all the default values of the placing object
+                                                            //Changing these values applies to any new object placed, does not yet work for already placed objects, though it loads their custom data
         if (object != null) {
             //Reset for new variables
             variablesTable.clear();

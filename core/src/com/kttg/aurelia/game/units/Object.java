@@ -14,7 +14,11 @@ import com.kttg.aurelia.editor.windows.MainScreen;
 
 import java.util.ArrayList;
 
-
+/*
+* Generic object for being placed in the editor
+* - Stores the data for saving and loading any object in the level
+* - Unit/Scenery classes read this data to create themselves
+* */
 public class Object {
     Image image = new Image(Setup.getUIButtonSkin().getDrawable("object")), selectionImg = new Image(Setup.getUIButtonSkin().getDrawable("selection0"));
     Actor imageActor;

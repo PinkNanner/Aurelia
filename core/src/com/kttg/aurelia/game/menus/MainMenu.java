@@ -16,7 +16,13 @@ import com.kttg.aurelia.game.Levels.TestLevel;
 import com.kttg.aurelia.game.assets.Setup;
 import com.kttg.aurelia.game.assets.MenuAnimation;
 
-public class MainMenu implements Screen {      /*Turn TitleScreen and MainMenu into 1 screen */
+/*
+* Creates the main menu for the game:
+* - Pressing space causes the menu items to fade in
+* - Pressing play loads the test level
+* */
+
+public class MainMenu implements Screen {
     static public Game game;
     static public Label artemis, pressSpace;
     static public TextButton play, stats, options, exit;

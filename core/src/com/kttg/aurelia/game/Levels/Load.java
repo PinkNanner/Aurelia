@@ -9,6 +9,11 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+/*
+* For loading a saved level into the game screen
+* - Checks if targeted file exists
+* - Reads level data and creates all Objects
+* - */
 public class Load {
     static Group objGroup = new Group();
     static ArrayList<Object> objList = new ArrayList<Object>();

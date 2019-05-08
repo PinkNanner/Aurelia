@@ -12,6 +12,12 @@ import com.kttg.aurelia.game.units.Object;
 
 import java.util.ArrayList;
 
+/*
+*Controls the mouse actions when placing an object:
+* - Creates a preview image of the placing object at the mouse position
+* - Clicking places a new object into the world
+* - Pressing "space" quickly changes the cursor to SelectObject
+* */
 public class PlaceObject {
     static Image previewImage = new Image(Setup.getUIButtonSkin().getDrawable("object"));
     static Object currentObject;

@@ -9,7 +9,7 @@ import java.util.Random;
 
 import static com.kttg.aurelia.game.menus.MainMenu.pressSpace;
 
-public class MenuAnimation {
+public class MenuAnimation { //Animates the stars in the main menu
     static float animTime = 0, titleAlpha = 1, spaceTimer = 0, w = Gdx.graphics.getWidth(), h = Gdx.graphics.getHeight(), fadeTimer, fadeAlpha = 0;
     static boolean pressSpaceBoo = false, starGroupBoo = false, transition = false, fadeIn = false, animatePressSpace = true;
     public static Group starGroup = new Group();
