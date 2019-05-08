@@ -1,0 +1,97 @@
+
+sprites.png
+size: 512,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+asteroid
+  rotate: false
+  xy: 423, 154
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+asteroidLarge
+  rotate: false
+  xy: 385, 188
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+base
+  rotate: false
+  xy: 204, 152
+  size: 91, 93
+  orig: 91, 93
+  offset: 0, 0
+  index: -1
+boundary
+  rotate: false
+  xy: 2, 45
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+enemy
+  rotate: false
+  xy: 131, 13
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+event
+  rotate: false
+  xy: 2, 2
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+friendly
+  rotate: false
+  xy: 169, 13
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+item
+  rotate: false
+  xy: 452, 204
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+neutral
+  rotate: false
+  xy: 385, 156
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+quest
+  rotate: false
+  xy: 45, 2
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+rift
+  rotate: false
+  xy: 88, 2
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+spawnerAlien
+  rotate: false
+  xy: 297, 165
+  size: 86, 80
+  orig: 86, 80
+  offset: 0, 0
+  index: -1
+spawnerRobotic
+  rotate: false
+  xy: 204, 65
+  size: 85, 85
+  orig: 85, 85
+  offset: 0, 0
+  index: -1

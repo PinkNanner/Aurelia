@@ -1,0 +1,202 @@
+
+UI.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+buttonDown
+  rotate: false
+  xy: 705, 873
+  size: 300, 50
+  orig: 300, 50
+  offset: 0, 0
+  index: -1
+buttonOver
+  rotate: false
+  xy: 303, 242
+  size: 300, 50
+  orig: 300, 50
+  offset: 0, 0
+  index: -1
+buttonUp
+  rotate: false
+  xy: 705, 821
+  size: 300, 50
+  orig: 300, 50
+  offset: 0, 0
+  index: -1
+checked
+  rotate: false
+  xy: 605, 244
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+dragImage
+  rotate: false
+  xy: 303, 523
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+grid
+  rotate: false
+  xy: 705, 719
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+highlighter
+  rotate: false
+  xy: 14, 78
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+object
+  rotate: false
+  xy: 705, 573
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+panel
+  rotate: false
+  xy: 2, 224
+  size: 299, 699
+  orig: 299, 699
+  offset: 0, 0
+  index: -1
+pauseButton
+  rotate: false
+  xy: 14, 140
+  size: 80, 82
+  orig: 80, 82
+  offset: 0, 0
+  index: -1
+playButton
+  rotate: false
+  xy: 807, 739
+  size: 80, 80
+  orig: 80, 80
+  offset: 0, 0
+  index: -1
+scrollerBackground
+  rotate: false
+  xy: 303, 321
+  size: 500, 200
+  orig: 500, 200
+  offset: 0, 0
+  index: -1
+scrollerCorner
+  rotate: false
+  xy: 707, 282
+  size: 10, 10
+  orig: 10, 10
+  offset: 0, 0
+  index: -1
+scrollerHScroll
+  rotate: false
+  xy: 303, 230
+  size: 100, 10
+  orig: 100, 10
+  offset: 0, 0
+  index: -1
+scrollerHScrollKnob
+  rotate: false
+  xy: 787, 707
+  size: 30, 10
+  orig: 30, 10
+  offset: 0, 0
+  index: -1
+scrollerVScroll
+  rotate: false
+  xy: 2, 22
+  size: 10, 200
+  orig: 10, 200
+  offset: 0, 0
+  index: -1
+scrollerVScrollKnob
+  rotate: false
+  xy: 1007, 903
+  size: 10, 20
+  orig: 10, 20
+  offset: 0, 0
+  index: -1
+selectBoxBackground
+  rotate: false
+  xy: 605, 271
+  size: 100, 21
+  orig: 100, 21
+  offset: 0, 0
+  index: -1
+selectBoxBackgroundOpen
+  rotate: false
+  xy: 96, 201
+  size: 100, 21
+  orig: 100, 21
+  offset: 0, 0
+  index: -1
+selectBoxBackgroundOver
+  rotate: false
+  xy: 889, 798
+  size: 100, 21
+  orig: 100, 21
+  offset: 0, 0
+  index: -1
+selection0
+  rotate: false
+  xy: 96, 149
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+selection1
+  rotate: false
+  xy: 889, 746
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+stopButton
+  rotate: false
+  xy: 705, 635
+  size: 80, 82
+  orig: 80, 82
+  offset: 0, 0
+  index: -1
+txFieldBackground
+  rotate: false
+  xy: 303, 294
+  size: 500, 25
+  orig: 500, 25
+  offset: 0, 0
+  index: -1
+txFieldCursor
+  rotate: false
+  xy: 2, 2
+  size: 7, 18
+  orig: 7, 18
+  offset: 0, 0
+  index: -1
+txFieldSelection
+  rotate: false
+  xy: 807, 719
+  size: 28, 18
+  orig: 28, 18
+  offset: 0, 0
+  index: -1
+unchecked
+  rotate: false
+  xy: 14, 51
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1
+uncheckedOver
+  rotate: false
+  xy: 705, 546
+  size: 25, 25
+  orig: 25, 25
+  offset: 0, 0
+  index: -1

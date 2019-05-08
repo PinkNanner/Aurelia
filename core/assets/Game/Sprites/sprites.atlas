@@ -1,0 +1,167 @@
+
+sprites.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+asteroid
+  rotate: false
+  xy: 410, 103
+  size: 25, 30
+  orig: 25, 30
+  offset: 0, 0
+  index: -1
+asteroid0
+  rotate: false
+  xy: 454, 722
+  size: 97, 98
+  orig: 97, 98
+  offset: 0, 0
+  index: -1
+asteroidLarge
+  rotate: false
+  xy: 217, 14
+  size: 51, 54
+  orig: 51, 54
+  offset: 0, 0
+  index: -1
+asteroidWeird
+  rotate: false
+  xy: 2, 222
+  size: 450, 800
+  orig: 450, 800
+  offset: 0, 0
+  index: -1
+bossGreen0
+  rotate: false
+  xy: 217, 70
+  size: 148, 150
+  orig: 148, 150
+  offset: 0, 0
+  index: -1
+boundary
+  rotate: false
+  xy: 454, 822
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+enemy
+  rotate: false
+  xy: 656, 851
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+enemyBlue
+  rotate: false
+  xy: 749, 978
+  size: 38, 44
+  orig: 38, 44
+  offset: 0, 0
+  index: -1
+enemyBossBlue
+  rotate: false
+  xy: 2, 8
+  size: 213, 212
+  orig: 213, 212
+  offset: 0, 0
+  index: -1
+enemyEggBlue
+  rotate: false
+  xy: 789, 992
+  size: 31, 30
+  orig: 31, 30
+  offset: 0, 0
+  index: -1
+enemyMineGreen
+  rotate: false
+  xy: 270, 2
+  size: 24, 23
+  orig: 24, 23
+  offset: 0, 0
+  index: -1
+enemyPurple
+  rotate: false
+  xy: 656, 883
+  size: 44, 44
+  orig: 44, 44
+  offset: 0, 0
+  index: -1
+enemyPurpleAdvanced
+  rotate: false
+  xy: 553, 775
+  size: 45, 45
+  orig: 45, 45
+  offset: 0, 0
+  index: -1
+enemyPurpleAdvanced1
+  rotate: false
+  xy: 600, 776
+  size: 32, 44
+  orig: 32, 44
+  offset: 0, 0
+  index: -1
+enemySpawnerAlien
+  rotate: false
+  xy: 454, 640
+  size: 86, 80
+  orig: 86, 80
+  offset: 0, 0
+  index: -1
+event
+  rotate: false
+  xy: 367, 92
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+friendly
+  rotate: false
+  xy: 702, 897
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+friendlyBase
+  rotate: false
+  xy: 656, 929
+  size: 91, 93
+  orig: 91, 93
+  offset: 0, 0
+  index: -1
+item
+  rotate: false
+  xy: 454, 597
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+neutral
+  rotate: false
+  xy: 749, 946
+  size: 36, 30
+  orig: 36, 30
+  offset: 0, 0
+  index: -1
+quest
+  rotate: false
+  xy: 270, 27
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+rift
+  rotate: false
+  xy: 553, 732
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+spawnerRobotic
+  rotate: false
+  xy: 367, 135
+  size: 85, 85
+  orig: 85, 85
+  offset: 0, 0
+  index: -1

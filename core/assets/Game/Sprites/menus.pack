@@ -1,0 +1,40 @@
+
+menus.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+menuActive0
+  rotate: false
+  xy: 1, 1
+  size: 100, 60
+  orig: 100, 60
+  offset: 0, 0
+  index: -1
+menuActive1
+  rotate: false
+  xy: 103, 1
+  size: 100, 60
+  orig: 100, 60
+  offset: 0, 0
+  index: -1
+menuInactive0
+  rotate: false
+  xy: 205, 1
+  size: 100, 60
+  orig: 100, 60
+  offset: 0, 0
+  index: -1
+selectImage
+  rotate: false
+  xy: 307, 11
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+selectImage2
+  rotate: false
+  xy: 359, 11
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
