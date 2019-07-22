@@ -11,6 +11,10 @@ import com.kttg.aurelia.editor.actions.mouse.Mouse;
 import com.kttg.aurelia.editor.actions.utils.GlobalValues;
 import com.kttg.aurelia.editor.actions.utils.Setup;
 import com.kttg.aurelia.editor.windows.MainScreen;
+import com.kttg.aurelia.game.Levels.LevelLoader;
+import com.kttg.aurelia.game.units.Friendly.Player;
+import com.kttg.aurelia.game.units.scenery.Asteroid;
+import com.kttg.aurelia.game.units.scenery.Crystal;
 
 import java.util.ArrayList;
 
@@ -23,13 +27,16 @@ public class Object {
     Image image = new Image(Setup.getUIButtonSkin().getDrawable("object")), selectionImg = new Image(Setup.getUIButtonSkin().getDrawable("selection0"));
     Actor imageActor;
     float[] varsArray;
-    float tempX, tempY;
+    float tempX, tempY, x, y;
     String[] labels;
     String name, group;
     int id;
     boolean isSetTemps = true;
     Rectangle rectangle = new Rectangle();
     ArrayList<Float> vars = new ArrayList<Float>();
+
+    public Object() {
+    }
 
     public Object(String n, Drawable d, ArrayList<Float> v, String[] s, boolean generateID) {
         name = n;
@@ -98,6 +105,7 @@ public class Object {
         }
         varsArray[4] = a;
     }
+
     public Image getImage() {
         return image;
     }

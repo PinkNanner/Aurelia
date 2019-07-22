@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 /*
 * Creates a game world in the physics engine,
-* loads the test world by pressing "space"
+* loads the test world by pressing 'space'
 * */
 
 public class TestLevel implements Screen {
@@ -35,6 +35,7 @@ public class TestLevel implements Screen {
     float PPM = 100f;
     static Group objectGroup = new Group();
     static ArrayList<Object> objectArrayList = new ArrayList<Object>();
+    LevelLoader levelLoader = new LevelLoader();
     OrthographicCamera cam;
     static World testWorld;
     Box2DDebugRenderer debugRenderer = new Box2DDebugRenderer();
@@ -44,8 +45,9 @@ public class TestLevel implements Screen {
     public void show() {
         testWorld = new World(new Vector2(0, 0), false);
         testWorld.setContactListener(new CollisionListener());
-        Load.LoadFile("level0", objectGroup, objectArrayList); //level0 is the default test world
+        levelLoader.LoadFile("level0", objectGroup, objectArrayList); //level0 is the default test world
         stage.addActor(objectGroup);
+
         cam = new OrthographicCamera(stage.getCamera().viewportWidth/PPM, stage.getCamera().viewportHeight/PPM); //Controls camera starting zoom
     }
 
@@ -59,8 +61,14 @@ public class TestLevel implements Screen {
         stage.act();
         stage.draw();
 
+        System.out.println("objectArrayList size = "+objectArrayList.size());
+
+        for (int i=0;i<objectArrayList.size();i++) {
+            objectArrayList.get(i).update();
+        }
+
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
-            Load.LoadFile("level0", objectGroup, objectArrayList);
+            levelLoader.LoadFile("level0", objectGroup, objectArrayList);
         }
 
     }

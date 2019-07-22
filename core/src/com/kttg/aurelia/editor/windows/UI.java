@@ -12,6 +12,7 @@ import com.kttg.aurelia.editor.actions.utils.Save;
 import com.kttg.aurelia.game.assets.Setup;
 import com.kttg.aurelia.game.units.Friendly.Player;
 import com.kttg.aurelia.game.units.Object;
+import com.kttg.aurelia.game.units.Ships.PirateScout;
 import com.kttg.aurelia.game.units.scenery.Asteroid;
 import com.kttg.aurelia.game.units.scenery.Crystal;
 
@@ -238,6 +239,7 @@ public class UI {
         unitVars.add(new Player().getObjectInfo()); //Must manually add a line for every created unit
         unitVars.add(new Asteroid().getObjectInfo());
         unitVars.add(new Crystal().getObjectInfo());
+        unitVars.add(new PirateScout().getObjectInfo());
     }
     public static void setXYFields(float x, float y){
         variablesFieldList.get(0).setText(String.valueOf(round(x)));

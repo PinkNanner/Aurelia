@@ -65,7 +65,7 @@ project(":core") {
         compile "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
         compile "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
         compile "com.underwaterapps.overlap2druntime:overlap2d-runtime-libgdx:0.1.0"
-        
+        compile group: 'com.badlogicgames.gdx', name: 'gdx-tools', version: '1.9.5'
     }
 }
 
