@@ -99,7 +99,7 @@ public class LevelLoader {
         System.out.println("Building tempObj into: ");
         if (n.equals("Player")){
             System.out.println("player");
-            PirateScout player = new PirateScout(n, d, v, s, true);
+            Player player = new Player(n, d, v, s, true);
             objList.add(player);
         }
         if (n.equals("PirateScout")){
@@ -109,13 +109,13 @@ public class LevelLoader {
         }
         if (n.equals("Crystal")){
             System.out.println("crystal");
-//           PirateScout player = new PirateScout(n, d, v, s, true);
-//            objList.add(player);
+           Crystal crystal = new Crystal(n, d, v, s, true);
+            objList.add(crystal);
         }
         if (n.equals("Asteroid")){
             System.out.println("asteroid");
-            PirateScout player = new PirateScout(n, d, v, s, true);
-            objList.add(player);
+            Asteroid asteroid = new Asteroid(n, d, v, s, true);
+            objList.add(asteroid);
         }
     }
 

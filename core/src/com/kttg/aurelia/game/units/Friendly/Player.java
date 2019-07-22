@@ -1,36 +1,36 @@
 package com.kttg.aurelia.game.units.Friendly;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.kttg.aurelia.game.assets.Setup;
 import com.kttg.aurelia.game.units.Object;
+import com.kttg.aurelia.game.units.PlayerStats;
 
 import java.util.ArrayList;
 
-public class Player {
-    static float x, y, w, h, angle, speedModifier = 0, hp = 100, maxHealth = 100;
+
+public class Player extends Object {
+    static float x, y, w, h, angle, hp, maxHealth, armor;
+    static String weapon, name = "Player";
     static boolean isMoving = false;
     static Image i;
     static Object objInfo;
-    static String name = "Player";
-    int id;
     Body body;
-
-    public Player(float xPos, float yPos, float width, float height, float angle, float health){ // For creating a new player
-        x = xPos;
-        y = yPos;
-        i = new Image(Setup.getSpriteSkin().getDrawable("neutral"));
-        if (width != 0) w = width; else w = i.getWidth();
-        if (height != 0) h = height; else h = i.getHeight();
-        this.angle = angle;
-        i.setSize(w, h);
-        i.setOrigin(w/2, h/2);
-        i.setRotation(angle * MathUtils.radiansToDegrees);
-        hp = health;
-        objInfo = new Object(name, getDrawable(), getVariables(), getLabels(), true);
+    public Player(String n, Drawable drawable, ArrayList<Float> vars, String[] labels, boolean generateID) { // For creating a new player
+        super(n, drawable, vars, labels, generateID);
+//                for (int i=0;i<v.length;i++){vars.add(v[i]);}
+//        name = n;
+        x = vars.get(0); y = vars.get(1);
+        w = vars.get(2); h = vars.get(3);
+        angle = vars.get(4);
+        hp = vars.get(5);
+        maxHealth = PlayerStats.getMaxHealth();
+        armor = PlayerStats.getArmor();
+        weapon = PlayerStats.getWeapon();
     }
+
+
     public Player(){ //For filling out the editor window
         i = new Image(Setup.getSpriteSkin().getDrawable("neutral"));
         i.setOrigin(w/2, h/2);
@@ -59,11 +59,8 @@ public class Player {
         body.setTransform(x, y, angle);
     }
 
-
-
-
     public static ArrayList<Float> getVariables(){
-        ArrayList<Float> f = new ArrayList<Float>();
+        ArrayList<Float> f = new ArrayList<Float>(); //Must add an entry to labels whenever a variable is added here
         f.add(x);
         f.add(y);
         f.add(w);
@@ -73,10 +70,16 @@ public class Player {
         f.add(maxHealth);
         return f;
     }
-    public static String[] getLabels(){
+
+    public void update(){
+        System.out.println("This is a Player");
+    }
+
+
+    public String[] getLabels(){
         return new String[]{"x", "y", "w", "h", "angle", "health", "maxHealth"};
     }
-    public static Image getImage(){
+    public Image getImage(){
         return i;
     }
     public static Drawable getDrawable(){

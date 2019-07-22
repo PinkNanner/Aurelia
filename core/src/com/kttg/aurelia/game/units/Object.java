@@ -24,16 +24,16 @@ import java.util.ArrayList;
 * - Unit/Scenery classes read this data to create themselves
 * */
 public class Object {
-    Image image = new Image(Setup.getUIButtonSkin().getDrawable("object")), selectionImg = new Image(Setup.getUIButtonSkin().getDrawable("selection0"));
-    Actor imageActor;
-    float[] varsArray;
-    float tempX, tempY, x, y;
-    String[] labels;
-    String name, group;
-    int id;
-    boolean isSetTemps = true;
-    Rectangle rectangle = new Rectangle();
-    ArrayList<Float> vars = new ArrayList<Float>();
+    public Image image = new Image(Setup.getUIButtonSkin().getDrawable("object")), selectionImg = new Image(Setup.getUIButtonSkin().getDrawable("selection0"));
+    public Actor imageActor;
+    public float[] varsArray;
+    public float tempX, tempY, x, y;
+    public String[] labels;
+    public String name, group;
+    public int id;
+    public boolean isSetTemps = true;
+    public Rectangle rectangle = new Rectangle();
+    public ArrayList<Float> vars = new ArrayList<Float>();
 
     public Object() {
     }

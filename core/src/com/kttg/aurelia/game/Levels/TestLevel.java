@@ -61,9 +61,9 @@ public class TestLevel implements Screen {
         stage.act();
         stage.draw();
 
-        System.out.println("objectArrayList size = "+objectArrayList.size());
+//        System.out.println("objectArrayList size = "+objectArrayList.size());
 
-        for (int i=0;i<objectArrayList.size();i++) {
+        for (int i=0;i<objectArrayList.size();i++) { //Updates every object in the level
             objectArrayList.get(i).update();
         }
 

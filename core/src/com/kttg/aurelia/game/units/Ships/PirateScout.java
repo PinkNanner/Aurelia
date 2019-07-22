@@ -26,9 +26,6 @@ public class PirateScout extends Object {
         w = vars.get(2); h = vars.get(3);
         angle = vars.get(4);
         hp = vars.get(5);
-        maxHealth = PlayerStats.getMaxHealth();
-        armor = PlayerStats.getArmor();
-        weapon = PlayerStats.getWeapon();
     }
 
 
@@ -61,7 +58,7 @@ public class PirateScout extends Object {
     }
 
     public static ArrayList<Float> getVariables(){
-        ArrayList<Float> f = new ArrayList<Float>();
+        ArrayList<Float> f = new ArrayList<Float>(); //Must add an entry to labels whenever a variable is added here
         f.add(x);
         f.add(y);
         f.add(w);
@@ -75,6 +72,8 @@ public class PirateScout extends Object {
     public void update(){
         System.out.println("This is a PirateScout");
     }
+
+
     public String[] getLabels(){
         return new String[]{"x", "y", "w", "h", "angle", "health", "maxHealth"};
     }
