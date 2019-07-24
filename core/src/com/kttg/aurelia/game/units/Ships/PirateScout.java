@@ -1,5 +1,6 @@
 package com.kttg.aurelia.game.units.Ships;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -82,7 +83,8 @@ public class PirateScout extends Object {
         i.setPosition(body.getPosition().x-i.getWidth()/2, body.getPosition().y-i.getHeight()/2);
         x = i.getX();
         y = i.getY();
-        x = body.getPosition().x; y = body.getPosition().y;
+        angle = (body.getAngle() * MathUtils.radiansToDegrees);
+        i.setRotation(angle);
     }
 
 

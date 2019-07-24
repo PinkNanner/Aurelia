@@ -99,11 +99,10 @@ public class Player extends Object {
         y = i.getY();
         rotatePlayer(stage);
         inputUpdate(delta);
-        updateCamera(cam, delta);
 //        x = body.getPosition().x; y = body.getPosition().y;
 
-        System.out.println("XY: "+x+" "+y);
-        System.out.println("BODY XY: "+body.getPosition().x+" "+body.getPosition().y);
+//        System.out.println("XY: "+x+" "+y);
+//        System.out.println("BODY XY: "+body.getPosition().x+" "+body.getPosition().y);
 //        body.setTransform(x, y, angle);
         if (hp <= 0){
 //            Main.reset();
@@ -147,10 +146,6 @@ public class Player extends Object {
         }
 
         body.setLinearVelocity(horizontalForce * speedModifier, verticalForce * speedModifier);
-    }
-    public void updateCamera(Camera cam, float delta){
-        cam.position.set(x, y, 1);
-        cam.update();
     }
 
     public void hit() {
@@ -199,5 +194,11 @@ public class Player extends Object {
     }
     public Object getObjectInfo(){
         return objInfo;
+    }
+    public float getX() {
+        return x;
+    }
+    public float getY() {
+        return y;
     }
 }

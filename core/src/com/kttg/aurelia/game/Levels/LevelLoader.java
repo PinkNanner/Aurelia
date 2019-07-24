@@ -79,7 +79,7 @@ public class LevelLoader {
         Drawable d = com.kttg.aurelia.game.assets.Setup.getSpriteSkin().getDrawable(item.get(1));
 
         Object tempObj = new Object(item.get(0), d, vars, labels, true);
-        System.out.println("Building tempObj");
+//        System.out.println("Building tempObj");
         buildObjects(item.get(0), d, vars, labels, true);
 
 //        objList.add(tempObj);

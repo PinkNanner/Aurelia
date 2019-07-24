@@ -2,6 +2,7 @@ package com.kttg.aurelia.game.Levels;
 
 
 import com.badlogic.gdx.*;
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -26,7 +27,6 @@ import static com.kttg.aurelia.editor.actions.utils.GlobalValues.PPM;
 public class TestLevel implements Screen {
     Game game;
     Stage stage;
-//    float PPM = 100f;
     Group objectGroup = new Group();
     ArrayList<Object> objectArrayList = new ArrayList<Object>();
     LevelLoader levelLoader = new LevelLoader();
@@ -58,7 +58,6 @@ public class TestLevel implements Screen {
 
         cam = new OrthographicCamera(stage.getCamera().viewportWidth/PPM, stage.getCamera().viewportHeight/PPM); //Controls camera starting zoom
 //        cam = new OrthographicCamera(w/PPM, h/PPM);
-
         stage.getViewport().setCamera(cam);
 
         inputCore = new InputCore(cam);
@@ -81,17 +80,26 @@ public class TestLevel implements Screen {
         player.createPhysics(testWorld, stage);
 
         //        stage.addActor(objectGroup);
+        System.out.println(stage.getWidth()+" "+stage.getHeight());
+        System.out.println(stage.getViewport().getScreenWidth()+" "+stage.getViewport().getScreenHeight());
+        System.out.println(stage.getCamera().viewportWidth+" "+stage.getCamera().viewportHeight);
     }
 
 
     public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
+        update(delta);
         testWorld.step(1/60f, 6 ,2);
         stage.act();
         stage.draw();
+        updateCamera();
 
+        debugRenderer.render(testWorld, cam.combined);
+
+    }
+
+    public void update(float delta){
         player.update(stage, delta, cam);
 
         for (int i=0;i<objectArrayList.size();i++) { //Updates every object in the level
@@ -115,13 +123,15 @@ public class TestLevel implements Screen {
             }
             objectArrayList.remove(playerLoc);
         }
-        debugRenderer.render(testWorld, cam.combined);
-
     }
 
+    public void updateCamera(){
+        cam.position.set(player.getX(), player.getY(), 1);
+        cam.update();
+    }
 
     public void resize(int width, int height) {
-        cam.setToOrtho(false, width / 2, height / 2);
+        
     }
 
     public void pause() {

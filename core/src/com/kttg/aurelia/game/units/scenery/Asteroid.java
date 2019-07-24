@@ -83,7 +83,8 @@ public class Asteroid extends Object{
         i.setPosition(body.getPosition().x-i.getWidth()/2, body.getPosition().y-i.getHeight()/2);
         x = i.getX();
         y = i.getY();
-        x = body.getPosition().x; y = body.getPosition().y;
+        angle = (body.getAngle() * MathUtils.radiansToDegrees);
+        i.setRotation(angle);
     }
 
     public String[] getLabels(){
