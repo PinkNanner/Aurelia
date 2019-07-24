@@ -28,7 +28,7 @@ public class MainMenu implements Screen {
     static public TextButton play, stats, options, exit;
     float w = Gdx.graphics.getWidth(), h = Gdx.graphics.getHeight();
     static public Group starGroup = MenuAnimation.starGroup;
-    StretchViewport viewport = new StretchViewport(w, h);
+//    StretchViewport viewport = new StretchViewport(w, h);
 
     static public Stage stage = new Stage() {
         public boolean keyDown(int keycode) {
@@ -104,6 +104,7 @@ public class MainMenu implements Screen {
         stage.addActor(options);
         stage.addActor(exit);
         stage.addActor(artemis);
+        game.setScreen(new TestLevel(game));
     }
 
     @Override

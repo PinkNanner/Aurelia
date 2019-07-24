@@ -3,7 +3,9 @@ package com.kttg.aurelia.game.units;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.*;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
@@ -34,6 +36,8 @@ public class Object {
     public boolean isSetTemps = true;
     public Rectangle rectangle = new Rectangle();
     public ArrayList<Float> vars = new ArrayList<Float>();
+    public Body body;
+
 
     public Object() {
     }
@@ -68,6 +72,7 @@ public class Object {
         }
         varsArray[0] = mx-tempX;
         varsArray[1] = my-tempY;
+        System.out.println("XY: "+varsArray[0]+" "+varsArray[1]);
 
     }
     public void setTemps(){ isSetTemps = true; }
@@ -159,5 +164,9 @@ public class Object {
 
     public void setSelectionImg(Image selectionImg) {
         this.selectionImg = selectionImg;
+    }
+
+    public void createPhysics(World world, Stage stage){
+        System.out.println("Creating empty physics");
     }
 }

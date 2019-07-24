@@ -1,6 +1,7 @@
 package com.kttg.aurelia.game.units.Ships;
 
 import com.badlogic.gdx.physics.box2d.*;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.kttg.aurelia.game.assets.Setup;
@@ -9,23 +10,28 @@ import com.kttg.aurelia.game.units.PlayerStats;
 
 import java.util.ArrayList;
 
-import static com.kttg.aurelia.game.units.Friendly.Player.getDrawable;
+import static com.kttg.aurelia.editor.actions.utils.GlobalValues.PPM;
 
 public class PirateScout extends Object {
-    static float x, y, w, h, angle, hp, maxHealth, armor;
-    static String weapon, name = "PirateScout";
-    static boolean isMoving = false;
-    static Image i;
-    static Object objInfo;
+    float x, y, w, h, angle, hp, maxHealth, armor;
+    String weapon, name = "PirateScout";
+    boolean isMoving = false;
+    Image i;
+    Object objInfo;
     Body body;
     public PirateScout(String n, Drawable drawable, ArrayList<Float> vars, String[] labels, boolean generateID) { // For creating a new pirate scout
         super(n, drawable, vars, labels, generateID);
 //                for (int i=0;i<v.length;i++){vars.add(v[i]);}
 //        name = n;
-        x = vars.get(0); y = vars.get(1);
-        w = vars.get(2); h = vars.get(3);
+        x = vars.get(0)/PPM; y = vars.get(1)/PPM;
+        w = vars.get(2)/PPM; h = vars.get(3)/PPM;
         angle = vars.get(4);
         hp = vars.get(5);
+        i = new Image(Setup.getSpriteSkin().getDrawable("enemy"));
+        i.setSize(w, h);
+        i.setOrigin(w/2, h/2);
+        i.setPosition(x, y);
+        objInfo = new Object(name, getDrawable(), getVariables(), getLabels(), true);
     }
 
 
@@ -38,14 +44,16 @@ public class PirateScout extends Object {
     }
 
 
-    public void createPhysics(World world){
+    public void createPhysics(World world, Stage stage){
+        stage.addActor(i);
         BodyDef bDef = new BodyDef();
         bDef.fixedRotation = true;
         bDef.type = BodyDef.BodyType.DynamicBody;
-        bDef.position.set(x, y);
+        bDef.position.set(x+(i.getImageWidth()/2), y+(i.getImageHeight()/2));
 
         PolygonShape polyShape = new PolygonShape();
-        polyShape.setAsBox(w/2, h/2); //Shape starts from center and builds outwards, 32 really equals 64
+        polyShape.setAsBox(w/2, h/2);
+//        polyShape.setAsBox((i.getWidth()/2)/2/PPM, (i.getHeight()/2)/2/PPM); //Shape starts from center and builds outwards, 32 really equals 64
 
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = polyShape;
@@ -54,10 +62,11 @@ public class PirateScout extends Object {
         body = world.createBody(bDef);
         body.createFixture(fixtureDef).setUserData(this);
 
-        body.setTransform(x, y, angle);
+        body.setTransform(x+(i.getImageWidth()/2), y+(i.getImageHeight()/2), angle+67.5f);
+
     }
 
-    public static ArrayList<Float> getVariables(){
+    public ArrayList<Float> getVariables(){
         ArrayList<Float> f = new ArrayList<Float>(); //Must add an entry to labels whenever a variable is added here
         f.add(x);
         f.add(y);
@@ -70,7 +79,10 @@ public class PirateScout extends Object {
     }
 
     public void update(){
-        System.out.println("This is a PirateScout");
+        i.setPosition(body.getPosition().x-i.getWidth()/2, body.getPosition().y-i.getHeight()/2);
+        x = i.getX();
+        y = i.getY();
+        x = body.getPosition().x; y = body.getPosition().y;
     }
 
 
@@ -80,7 +92,7 @@ public class PirateScout extends Object {
     public Image getImage(){
         return i;
     }
-    public static Drawable getDrawable(){
+    public Drawable getDrawable(){
         return i.getDrawable();
     }
     public Object getObjectInfo(){

@@ -6,8 +6,12 @@ public class GlobalValues {
 
     static int globalId = -1; //Must always start new program from -1 to load data correctly
     static int animTimer; //Global timer for menu animation
-    static Drawable selectionDrawable = Setup.getUIButtonSkin().getDrawable("selection0");
+    public static Float PPM = 100f;
+    static Drawable selectionDrawable;
 
+    public static void initialize(){
+        selectionDrawable = Setup.getUIButtonSkin().getDrawable("selection0");
+    }
 
     public static int generateId(){ //Generate a new set of ID's anytime a map is loaded
         globalId+=1;

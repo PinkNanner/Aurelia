@@ -95,25 +95,19 @@ public class LevelLoader {
     }
 
     public void buildObjects(String n, Drawable d, ArrayList<Float> v, String[] s, boolean generateID){
-        System.out.println("n == "+n);
-        System.out.println("Building tempObj into: ");
         if (n.equals("Player")){
-            System.out.println("player");
             Player player = new Player(n, d, v, s, true);
             objList.add(player);
         }
         if (n.equals("PirateScout")){
-            System.out.println("pirate scout");
             PirateScout player = new PirateScout(n, d, v, s, true);
             objList.add(player);
         }
         if (n.equals("Crystal")){
-            System.out.println("crystal");
            Crystal crystal = new Crystal(n, d, v, s, true);
             objList.add(crystal);
         }
         if (n.equals("Asteroid")){
-            System.out.println("asteroid");
             Asteroid asteroid = new Asteroid(n, d, v, s, true);
             objList.add(asteroid);
         }

@@ -7,11 +7,11 @@ import com.kttg.aurelia.game.menus.Main;
 public class GameLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-//		System.setProperty("org.lwjgl.opengl.Window.undecorated", "true");
-//		config.width = (int) (LwjglApplicationConfiguration.getDesktopDisplayMode().width);
-//		config.height = (int) (LwjglApplicationConfiguration.getDesktopDisplayMode().height);
-//		config.resizable = false;
-		//config.fullscreen = true;
+		System.setProperty("org.lwjgl.opengl.Window.undecorated", "true");
+		config.width = (int) (LwjglApplicationConfiguration.getDesktopDisplayMode().width);
+		config.height = (int) (LwjglApplicationConfiguration.getDesktopDisplayMode().height);
+		config.resizable = false;
+		config.fullscreen = false;
 		new LwjglApplication(new Main(), config);
 	}
 }
